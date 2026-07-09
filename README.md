@@ -1,58 +1,433 @@
-# KSP Crime Intelligence Platform — Setup Guide
+# 🚔 AI-Driven Crime Analytics & Visualization Platform
 
-## Step 1 — Generate data & train models (Kaggle)
-1. Create a new Kaggle Notebook, upload `ksp_crime_intel_training.ipynb` (or paste its cells in).
-2. Run all cells top to bottom (CPU only, no GPU/internet needed — everything is generated in-notebook).
-3. Takes ~1-2 minutes. It will produce an `Output → artifacts/` folder containing:
+<p align="center">
 
-   **Raw schema tables** (mirrors the real KSP FIR ER diagram — CaseMaster, ComplainantDetails, Victim,
-   Accused, ArrestSurrender, ActSectionAssociation, ChargesheetDetails, District, Unit, CrimeHead,
-   CrimeSubHead, Act, Section, Court, Employee). Include these in your repo/demo to show schema fidelity —
-   the app doesn't read them directly.
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-Live-red?style=for-the-badge&logo=streamlit)
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-success?style=for-the-badge)
+![Data Analytics](https://img.shields.io/badge/Data-Analytics-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-   **Flattened analytics view + ML artifacts** (what `app.py` actually reads):
-   - `crime_incidents.csv` — 20,000 cases flattened from CaseMaster + joins, one row per case
-   - `district_daily_risk.csv` — district-day aggregates used for risk scoring
-   - `districts_reference.csv` — district geo + socio-economic reference table
-   - `hotspot_clusters.csv` — DBSCAN spatiotemporal cluster summary
-   - `graph_edges.csv` / `graph_nodes.csv` — accused-victim-police station relationship graph
-   - `top_repeat_offenders.csv` — highest-degree (most connected) accused persons
-   - `isolation_forest.pkl` — trained anomaly-detection model
-   - `risk_model.pkl` — trained RandomForest risk-scoring model
-4. On Kaggle: click the "Output" tab on the right panel → download the whole `artifacts` folder.
+</p>
 
-## Step 2 — Run the Streamlit app locally
+---
+
+# 🌐 Live Demo
+
+### 🚀 https://ai-driven-crime-analytics-visualization-platform-nnx7ebrmgeyyg.streamlit.app/
+
+---
+
+# 📌 Overview
+
+The **AI-Driven Crime Analytics & Visualization Platform** is an intelligent crime analysis system designed as a prototype for the **Karnataka State Police Crime Analytics Challenge**.
+
+The platform transforms large-scale crime records into actionable intelligence using **Machine Learning**, **Data Analytics**, **Geospatial Visualization**, **Network Analysis**, and **Interactive Dashboards**.
+
+It enables law enforcement agencies to identify:
+
+- Crime Hotspots
+- Repeat Offenders
+- Emerging Crime Trends
+- Criminal Networks
+- Risk Predictions
+- Suspicious Activities
+- AI-generated Insights
+
+through an interactive Streamlit application.
+
+---
+
+# 🎯 Problem Statement
+
+Traditional crime analysis relies heavily on manual exploration of large datasets, making it difficult to identify hidden crime patterns and make timely decisions.
+
+This platform leverages Artificial Intelligence and Data Analytics to provide:
+
+- Crime Intelligence
+- Predictive Analytics
+- Interactive Visualization
+- Decision Support
+
+for modern policing.
+
+---
+
+# ✨ Key Features
+
+## 📊 Crime Analytics Dashboard
+
+- Crime KPIs
+- Total Crimes
+- Solved Cases
+- Pending Cases
+- District-wise Statistics
+- Monthly Crime Trends
+- Crime Category Distribution
+- Dynamic Filters
+
+---
+
+## 🗺 Interactive Crime Maps
+
+- GIS Visualization
+- Crime Heatmaps
+- Marker Clustering
+- District-wise Drill Down
+- Interactive Crime Locations
+- Hotspot Visualization
+
+---
+
+## 🔥 Crime Hotspot Detection
+
+Uses **DBSCAN Clustering** to identify high-density crime regions.
+
+Features
+
+- Hotspot Detection
+- Cluster Statistics
+- High-Risk Zones
+- Geographic Analysis
+
+---
+
+## 👥 Criminal Network Analysis
+
+Visualizes relationships between:
+
+- Criminals
+- Victims
+- Locations
+- Crime Events
+
+Includes
+
+- Interactive Graph
+- Community Detection
+- Degree Centrality
+- Network Exploration
+
+---
+
+## 👤 Repeat Offender Analysis
+
+Automatically identifies
+
+- Repeat Offenders
+- Crime Frequency
+- Risk Levels
+- Crime History
+- Criminal Ranking
+
+---
+
+## 🤖 Machine Learning Modules
+
+Implemented ML algorithms
+
+- Random Forest
+- Isolation Forest
+- DBSCAN
+
+Capabilities
+
+- Crime Risk Prediction
+- Crime Forecasting
+- Hotspot Detection
+- Anomaly Detection
+
+---
+
+## 📈 Predictive Analytics
+
+Predicts
+
+- Crime Risk
+- Future Crime Trends
+- District Risk Levels
+- Emerging Crime Areas
+
+---
+
+## 🚨 Anomaly Detection
+
+Isolation Forest detects
+
+- Suspicious Crimes
+- Rare Incidents
+- Abnormal Crime Spikes
+- Unusual Crime Patterns
+
+---
+
+## 🔍 Smart Search
+
+Search records by
+
+- Crime ID
+- District
+- Crime Type
+- Police Station
+- Victim
+- Suspect
+
+---
+
+## 💡 AI Insights
+
+Automatically generates
+
+- Crime Pattern Analysis
+- Emerging Trend Alerts
+- District Intelligence
+- Risk Recommendations
+- Feature Importance
+
+---
+
+## 📊 Statistical Analytics
+
+Includes
+
+- Correlation Matrix
+- Feature Importance
+- Association Rule Mining
+- Trend Analysis
+- Crime Forecasting
+
+---
+
+# 🧠 Machine Learning Pipeline
+
+```text
+Crime Dataset
+      │
+      ▼
+Data Cleaning
+      │
+      ▼
+Feature Engineering
+      │
+      ▼
+Data Preprocessing
+      │
+      ▼
+Machine Learning Models
+      │
+      ▼
+Predictions
+      │
+      ▼
+Interactive Dashboard
+      │
+      ▼
+AI Insights
+```
+
+---
+
+# 🛠 Technology Stack
+
+## Frontend
+
+- Streamlit
+
+## Machine Learning
+
+- Scikit-Learn
+- Random Forest
+- Isolation Forest
+- DBSCAN
+
+## Data Processing
+
+- Pandas
+- NumPy
+
+## Visualization
+
+- Plotly
+- Folium
+- PyDeck
+- NetworkX
+- PyVis
+
+## Database
+
+- SQLite
+
+## Programming Language
+
+- Python
+
+---
+
+# 📂 Project Structure
+
+```text
+AI-Driven-Crime-Analytics-Visualization-Platform
+
+│── app.py
+│── requirements.txt
+│── README.md
+
+├── artifacts/
+
+│     crime_incidents.csv
+│     hotspot_clusters.csv
+│     graph_nodes.csv
+│     graph_edges.csv
+│     feature_importance.csv
+│     correlation_matrix.csv
+│     association_rules.csv
+│     crime_forecasts.csv
+│     forecast_30_days.csv
+│     ai_insights.json
+│     emerging_trend_alerts.csv
+│     kpi_metrics.json
+│     risk_model.pkl
+│     isolation_forest.pkl
+
+├── pages/
+
+├── utils/
+
+└── assets/
+```
+
+---
+
+# 📈 Implemented Modules
+
+✅ Crime Dashboard
+
+✅ Interactive KPI Cards
+
+✅ Crime Heatmaps
+
+✅ Interactive Crime Maps
+
+✅ District Drill-down
+
+✅ Crime Hotspot Detection
+
+✅ Criminal Network Analysis
+
+✅ Repeat Offender Analysis
+
+✅ Crime Forecasting
+
+✅ Correlation Analysis
+
+✅ Feature Importance
+
+✅ Association Rule Mining
+
+✅ AI Insights
+
+✅ Risk Prediction
+
+✅ Anomaly Detection
+
+✅ Search Engine
+
+✅ Emerging Trend Alerts
+
+---
+
+# 📊 Machine Learning Models
+
+| Model | Purpose |
+|--------|----------|
+| Random Forest | Crime Risk Prediction |
+| Isolation Forest | Crime Anomaly Detection |
+| DBSCAN | Crime Hotspot Detection |
+
+---
+
+# 📊 Visualizations
+
+The platform provides
+
+- Interactive Dashboard
+- Heatmaps
+- GIS Maps
+- Crime Distribution Charts
+- KPI Cards
+- Correlation Matrix
+- Feature Importance Charts
+- Criminal Network Graph
+- Forecast Charts
+- Trend Analysis
+
+---
+
+# 🚀 Installation
+
+Clone Repository
+
 ```bash
-mkdir ksp-crime-platform
-cd ksp-crime-platform
-# put app.py + requirements.txt here
-# put the downloaded artifacts/ folder here too, so structure is:
-#   ksp-crime-platform/
-#     app.py
-#     requirements.txt
-#     artifacts/
-#       crime_incidents.csv
-#       ...
+git clone https://github.com/mrvarshith17/AI-Driven-Crime-Analytics-Visualization-Platform.git
+```
 
+Move into project
+
+```bash
+cd AI-Driven-Crime-Analytics-Visualization-Platform
+```
+
+Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
+
+Run application
+
+```bash
 streamlit run app.py
 ```
 
-## What each dashboard page does
-| Page | Maps to slide feature |
-|---|---|
-| Overview | High-level KPIs, trend line, AI insights, and red-zone Emerging Trend Alerts |
-| Search & AI Query | Natural-language query + global search across records |
-| Geospatial Hotspot Map | "Advanced Visualization" — district-level interactive maps + DBSCAN hotspot clusters |
-| District Drill-down | "District-Level Drill-down" |
-| Network & Link Analysis | "Criminological Network & Link Analysis" — relationship mapping, repeat offender tracking, and Association Detection (Act/Crime association rules) |
-| Predictive Risk Dashboard | "Sociological & AI-Driven Predictive Dashboards" — risk scoring + explainability |
-| Anomaly Detection | "Anomaly Detection" visual call-outs |
-| Trend & Pattern Discovery | "Pattern & Trend Discovery" — MO breakdown, 30-day forecast, socio-economic correlation, full Emerging Trend Alert log |
+---
 
-## Notes for your demo
-- **Data**: This uses synthetic data generated to populate the actual KSP FIR System ER schema (CaseMaster, Victim, Accused, ArrestSurrender, Act/Section, CrimeHead/CrimeSubHead, etc.) — real KSP incident records aren't public, but the schema itself is real. Say this explicitly in your pitch: "synthetic data populated against the real KSP database design, since raw records are confidential." That's a stronger claim than a made-up schema and shows you actually engineered against the provided ER diagram.
-- `CrimeNo` values follow the exact spec from the ER doc: 1-digit category code + 4-digit District ID + 4-digit Unit ID + 4-digit year + 5-digit serial (e.g. `144130075202500001`).
-- **No GPU needed anywhere** — IsolationForest, RandomForest, and DBSCAN are all fast CPU models; training takes seconds on 20k rows.
-- **Swapping in real data later**: if you get an anonymized real dataset, keep the same column names (`district`, `crime_type`, `latitude`, `longitude`, `date`, `hour`, `suspect_id`, `victim_id`, `severity_score`, etc.) and the notebook + app work unmodified.
-- To deploy publicly for judges, push this folder to GitHub and deploy free on [Streamlit Community Cloud](https://streamlit.io/cloud) — point it at `app.py`, it installs `requirements.txt` automatically. Just make sure `artifacts/` is committed to the repo (the pkl/csv files are small, well under GitHub limits).
+# 🌐 Live Application
+
+## 🚀 https://ai-driven-crime-analytics-visualization-platform-nnx7ebrmgeyyg.streamlit.app/
+
+---
+
+# 🔮 Future Enhancements
+
+- Real-time Crime Monitoring
+- Large Language Model Integration
+- Voice-based Crime Search
+- Explainable AI
+- Automated PDF Reports
+- Multi-language Support
+- Police Resource Optimization
+- Live Crime Streaming
+
+---
+
+# 👨‍💻 Developer
+
+## Varshith Pundru
+
+**AI Engineer | Machine Learning | Data Science | Full Stack Development**
+
+GitHub
+
+https://github.com/mrvarshith17
+
+---
+
+# 📜 License
+
+This project is developed for educational, research, and hackathon purposes.
+
+---
+
+# ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub!
