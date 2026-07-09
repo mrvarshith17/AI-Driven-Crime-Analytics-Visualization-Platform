@@ -1,0 +1,21 @@
+CourtID,CourtName,DistrictID,StateID,Active
+1,"District & Sessions Court, Bengaluru Urban",4401,1,1
+2,"District & Sessions Court, Mysuru",4402,1,1
+3,"District & Sessions Court, Dakshina Kannada",4403,1,1
+4,"District & Sessions Court, Belagavi",4404,1,1
+5,"District & Sessions Court, Dharwad",4405,1,1
+6,"District & Sessions Court, Kalaburagi",4406,1,1
+7,"District & Sessions Court, Ballari",4407,1,1
+8,"District & Sessions Court, Shivamogga",4408,1,1
+9,"District & Sessions Court, Tumakuru",4409,1,1
+10,"District & Sessions Court, Udupi",4410,1,1
+11,"District & Sessions Court, Davanagere",4411,1,1
+12,"District & Sessions Court, Bidar",4412,1,1
+13,"District & Sessions Court, Raichur",4413,1,1
+14,"District & Sessions Court, Kolar",4414,1,1
+15,"District & Sessions Court, Chikkamagaluru",4415,1,1
+16,"District & Sessions Court, Bagalkot",4416,1,1
+17,"District & Sessions Court, Chitradurga",4417,1,1
+18,"District & Sessions Court, Hassan",4418,1,1
+19,"District & Sessions Court, Mandya",4419,1,1
+20,"District & Sessions Court, Koppal",4420,1,1

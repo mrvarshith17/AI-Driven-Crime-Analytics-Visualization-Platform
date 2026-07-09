@@ -1,0 +1,12 @@
+ActCode,SectionCode,SectionDescription,Active
+IPC,302,Murder,1
+IPC,323,Voluntarily causing hurt,1
+IPC,363,Kidnapping,1
+IPC,379,Theft,1
+IPC,457,House-breaking by night,1
+IPC,392,Robbery,1
+IPC,379A,Vehicle Theft,1
+ITACT,66D,Cheating by personation using computer resource,1
+IPC,498A,Cruelty by husband/relatives,1
+NDPS,20,Possession of narcotic substance,1
+IPC,384,Extortion,1
